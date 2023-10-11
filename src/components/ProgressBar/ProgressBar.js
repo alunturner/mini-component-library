@@ -35,7 +35,7 @@ const ProgressBar = ({ value, size }) => {
 const ProgressWrapper = styled.div`
     border-radius: var(--borderRadius);
     background-color: ${COLORS.transparentGray15};
-    box-shadow: 0px 2px 4px 0px rgba(128, 128, 128, 0.35) inset;
+    box-shadow: 0px 2px 4px 0px ${COLORS.transparentGray15} inset;
     width: 370px;
     height: var(--height);
     padding: var(--padding);
