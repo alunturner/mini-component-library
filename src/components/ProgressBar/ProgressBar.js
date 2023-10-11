@@ -6,17 +6,19 @@ import { COLORS } from '../../constants';
 
 const SIZES = {
     small: {
-        "--height": "8px",
-        "--borderRadius": "4px",
+        "--height": 8,
+        "--padding": 0,
+        "--borderRadius": 4,
     },
     medium: {
-        "--height": "12px",
-        "--borderRadius": "4px",
+        "--height": 12,
+        "--padding": 0,
+        "--borderRadius": 4,
     },
     large: {
-        "--height": "24px",
-        "--borderRadius": "8px",
-        "--padding": "4px",
+        "--height": 16,
+        "--padding": 4,
+        "--borderRadius": 8,
     }
 }
 const ProgressBar = ({ value, size }) => {
@@ -38,16 +40,13 @@ const ProgressWrapper = styled.div`
     box-shadow: 0px 2px 4px 0px ${COLORS.transparentGray15} inset;
     width: 370px;
     height: var(--height);
-    padding: var(--padding);
+    overflow: hidden;
 `
 
 const ProgressContent = styled.div`
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border-top-right-radius: ${p => p.value === 100 && "4px"};
-    border-bottom-right-radius: ${p => p.value === 100 && "4px"};
     background-color: ${COLORS.primary};
     width: ${p => `${p.value}%`};
-    height: 100%;
+    height: var(--height);
+    margin: var(--padding);
 `
 export default ProgressBar;
