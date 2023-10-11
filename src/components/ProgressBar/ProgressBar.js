@@ -39,7 +39,6 @@ const ProgressWrapper = styled.div`
     background-color: ${COLORS.transparentGray15};
     box-shadow: 0px 2px 4px 0px ${COLORS.transparentGray15} inset;
     width: 370px;
-    height: var(--height);
     overflow: hidden;
     padding: var(--padding);
 `
