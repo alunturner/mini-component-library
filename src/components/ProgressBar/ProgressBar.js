@@ -21,7 +21,16 @@ const SIZES = {
     }
 }
 const ProgressBar = ({ value, size }) => {
-    return <ProgressWrapper style={SIZES[size]}role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={value}><ProgressContent value={value}/></ProgressWrapper>;
+    return (
+        <ProgressWrapper 
+            style={SIZES[size]} 
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow={value}
+        >
+            <ProgressContent value={value} />
+        </ProgressWrapper>);
 };
 
 const ProgressWrapper = styled.div`
