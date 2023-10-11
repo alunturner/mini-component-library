@@ -6,7 +6,10 @@ import { COLORS } from '../../constants';
 import VisuallyHidden from '../VisuallyHidden';
 
 const ProgressBar = ({ value, size }) => {
-  return <strong>{value}</strong>;
+    return <Progress role="progressbar">{value}</Progress>;
 };
 
+const Progress = styled.div`
+    height: auto;
+`
 export default ProgressBar;
