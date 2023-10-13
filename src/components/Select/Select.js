@@ -29,6 +29,7 @@ const Container = styled.div`
     background: ${COLORS.transparentGray15};
 `
 
+// alternative to flex box would have been absolute icon positioning
 const Wrapper = styled.div`
     width: auto;
     padding: 12px 16px;
@@ -45,6 +46,7 @@ const Span = styled.span`
     margin-right: 24px;
 `
 
+// could have set top and left to 0, then set width and height to 100%
 const NativeSelect = styled.select`
     position: absolute;
     width: 100%;
