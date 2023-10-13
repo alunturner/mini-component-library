@@ -56,6 +56,10 @@ const Wrapper = styled.div`
         outline: 1px dotted black;
         outline: 5px auto -webkit-focus-ring-color;
     }
+
+    ${NativeSelect}:hover + & {
+        color: black;
+    }
 `
 
 const Span = styled.span`
