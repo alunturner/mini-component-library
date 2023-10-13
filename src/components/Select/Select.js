@@ -50,7 +50,7 @@ const Wrapper = styled.div`
     line-height: normal;
     
     ${NativeSelect}:focus + & {
-        border: 2px solid blue;
+        outline: 5px auto -webkit-focus-ring-color
     }
 `
 
