@@ -15,6 +15,9 @@ const Select = ({ label, value, onChange, children }) => {
             </NativeSelect>
             <Wrapper>
                 <Span>{displayedValue}</Span>
+                {/* if we had a wrapper on the icon, could use
+                    pointer-events: none to avoid having to use z-index
+                    */}
                 <Icon id="chevron-down" size="24" />
             </Wrapper>
         </Container>
