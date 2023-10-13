@@ -24,7 +24,9 @@ const Select = ({ label, value, onChange, children }) => {
 const Container = styled.div`
     position: relative;
     color: ${COLORS.gray700};
-    width: auto;
+    width: max-content;
+    border-radius: 8px;
+    background: ${COLORS.transparentGray15};
 `
 
 const Wrapper = styled.div`
@@ -45,6 +47,7 @@ const Span = styled.span`
 
 const NativeSelect = styled.select`
     position: absolute;
+    width: 100%;
     padding: 12px 16px;
     opacity: 0%;
 `
