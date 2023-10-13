@@ -6,13 +6,47 @@ import Icon from '../Icon';
 import { getDisplayedValue } from './Select.helpers';
 
 const Select = ({ label, value, onChange, children }) => {
-  const displayedValue = getDisplayedValue(value, children);
+    const displayedValue = getDisplayedValue(value, children);
 
-  return (
-    <select value={value} onChange={onChange}>
-      {children}
-    </select>
-  );
+    return (
+        <Container>
+            <NativeSelect value={value} onChange={onChange}>
+                {children}
+            </NativeSelect>
+            <Wrapper>
+                <Span>{displayedValue}</Span>
+                <Icon id="chevron-down" size="24" />
+            </Wrapper>
+        </Container>
+    );
 };
+
+const Container = styled.div`
+    position: relative;
+    color: ${COLORS.gray700};
+    width: auto;
+`
+
+const Wrapper = styled.div`
+    width: auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+`
+
+const Span = styled.span`
+    margin-right: 24px;
+`
+
+const NativeSelect = styled.select`
+    position: absolute;
+    padding: 12px 16px;
+    opacity: 0%;
+`
 
 export default Select;
